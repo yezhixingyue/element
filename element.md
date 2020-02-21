@@ -1,4 +1,4 @@
-sass语法：
+# sass语法及element模拟要点：
 1.  样式值（颜色、尺寸、padding等）提取到一个专门文件中
 2. @include
 3. @include when(class)   约等于&.class?
@@ -20,4 +20,23 @@ sass语法：
            $ + span {	//作用到该元素紧挨着的span元素身上
                margin-left: 5px
            }
+      }
+15. ESLint + Airbnb config    =>   Lint on save  => jest  => 单独文件
+16. 如果开始未选择sass，后面使用如下进行下载安装：
+      cnpm install node-sass sass-loader --save-dev //如有报错可分开写
+17. vue.config.js中设置路径  为常用路径设置别名方便使用
+18. sass的遍历方法： 
+      @for $i from 0 through 24 {
+            .el-col-#{$i} {
+                  width: $i / 24 * 100%;
+            }
+      }
+19. 组件名称： export default中设置name属性，与porps、methods等并列，其值即为该组件的name值
+20. 获取父组件name值： this.$parent.$options.name 
+      gutter () {
+            let parent = this.$parent;
+            while(parent && parent.$options.name !== "ELRow") {
+                  parent = parent.$parent;
+            }
+            return parent ? parent.gutter : 0;
       }
