@@ -40,3 +40,5 @@
             }
             return parent ? parent.gutter : 0;
       }
+21. flex-shrink:0   flex布局中不会随着外部容器的大小而缩减
+22. 字体设置光滑： -webkit-font-smoothing:antialiased; | -moz-osx-font-smoothing:grayscale;
