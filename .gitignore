@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+ElementUI-代码
 /dist
 
 # local env files
