@@ -16,7 +16,7 @@
       	color: @color
             }
       }
-14.  []class *= "el-icon-"] {
+14.  [class *= "el-icon-"] {
            $ + span {	//作用到该元素紧挨着的span元素身上
                margin-left: 5px
            }
@@ -42,3 +42,15 @@
       }
 21. flex-shrink:0   flex布局中不会随着外部容器的大小而缩减
 22. 字体设置光滑： -webkit-font-smoothing:antialiased; | -moz-osx-font-smoothing:grayscale;
+
+23. & + & {
+    margin-left: 10px;
+  }
+
+24. [class *= 'el-icon-'] {
+    & + span {
+      margin-left: 5px;
+    }
+  }
+25. 路径设置
+26. vue.use()  与 组件的install
